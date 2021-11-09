@@ -1,0 +1,27 @@
+.rts-top_scroll-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: rgba(46, 62, 110, 0.5);
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 20px 0 20px;
+  &:hover {
+    background-color: rgb(46, 62, 110);
+    cursor: pointer;
+  }
+}
+
+.rts-top_scroll-arrow_sign {
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+  marginleft: -15px;
+  marginbottom: 5px;
+}
