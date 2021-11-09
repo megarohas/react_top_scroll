@@ -5,7 +5,7 @@
   "main": "./react_top_scroll.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/megarohas/react_top_scroll"
+    "url": "git+https://github.com/megarohas/react_top_scroll.git"
   },
   "keywords": [
     "react",
@@ -53,5 +53,6 @@
   "dependencies": {
     "babel-loader": "^8.2.3",
     "file-loader": "^6.2.0"
-  }
+  },
+  "homepage": "https://github.com/megarohas/react_top_scroll#readme"
 }
