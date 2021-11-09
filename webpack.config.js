@@ -6,11 +6,11 @@ const cssnano = require("cssnano");
 module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/app.css",
+      filename: "app.css",
     }),
   ],
   mode: "production",
-  entry: "./src/react_top_scroll.js",
+  entry: "./react_top_scroll.js",
   output: {
     path: path.resolve(""),
     filename: "react_top_scroll.js",
