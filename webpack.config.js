@@ -6,26 +6,34 @@ const cssnano = require("cssnano");
 module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/app.css"
-    })
+      filename: "css/app.css",
+    }),
   ],
   mode: "production",
   entry: "./src/react_top_scroll.js",
   output: {
     path: path.resolve(""),
     filename: "react_top_scroll.js",
-    libraryTarget: "commonjs2"
+    libraryTarget: "commonjs2",
   },
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+      },
+      {
         test: /\.js?$/,
         exclude: /(node_modules)/,
-        use: "babel-loader"
+        use: "babel-loader",
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.scss$/,
@@ -37,19 +45,19 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               plugins: () => [autoprefixer(), cssnano()],
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
-          { loader: "sass-loader", options: { sourceMap: true } }
-        ]
-      }
-    ]
+          { loader: "sass-loader", options: { sourceMap: true } },
+        ],
+      },
+    ],
   },
   resolve: {
     alias: {
       react: path.resolve(__dirname, "./node_modules/react"),
-      "react-dom": path.resolve(__dirname, "./node_modules/react-dom")
-    }
+      "react-dom": path.resolve(__dirname, "./node_modules/react-dom"),
+    },
   },
   externals: {
     // Don't bundle react or react-dom
@@ -57,13 +65,13 @@ module.exports = {
       commonjs: "react",
       commonjs2: "react",
       amd: "React",
-      root: "React"
+      root: "React",
     },
     "react-dom": {
       commonjs: "react-dom",
       commonjs2: "react-dom",
       amd: "ReactDOM",
-      root: "ReactDOM"
-    }
-  }
+      root: "ReactDOM",
+    },
+  },
 };

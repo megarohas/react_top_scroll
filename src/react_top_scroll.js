@@ -1,6 +1,7 @@
 import "./react_top_scroll.scss";
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
+import ArrowImg from "./top_arrow.png";
 
 const TopScroll = ({ btn_text, arrow_sign, options }) => {
   const [is_visible, setIsVisible] = useState(false);
@@ -45,18 +46,8 @@ const TopScroll = ({ btn_text, arrow_sign, options }) => {
 TopScroll.defaultProps = {
   btn_text: "Click to the Top Scroll",
   arrow_sign: (
-    <img
-      style={{
-        width: "30px",
-        height: "30px",
-        transform: "rotate(180deg)",
-        marginLeft: "-15px",
-        marginBottom: "5px",
-      }}
-      src="/top_arrow.png"
-    />
+    <img className={"rts-top_scroll-arrow_sign"} src="/top_arrow.png" />
   ),
-  // arrow_sign: "⬆️"
 };
 
 TopScroll.propTypes = {
