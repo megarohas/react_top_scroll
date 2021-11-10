@@ -19,7 +19,7 @@ import TopScroll from "react_top_scroll";
 
 <div>
   <TopScroll />
-</div>;
+</div>
 ```
 
 ## Props
