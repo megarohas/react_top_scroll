@@ -32,7 +32,7 @@ import TopScroll from "react_top_scroll";
 
 ## Built With
 
-- React.js - The web framework used
+- react.js
 - prop-types
 
 ## Authors

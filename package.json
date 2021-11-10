@@ -1,6 +1,6 @@
 {
   "name": "react_top_scroll",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple button that scrolls page to the top smoothly",
   "main": "./react_top_scroll.js",
   "repository": {
