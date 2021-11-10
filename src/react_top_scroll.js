@@ -5,7 +5,7 @@ import { ScrollButton, ArrowImg } from "./styled_components.js";
 const TopScroll = ({ btn_text, arrow_sign, options }) => {
   const [is_visible, setIsVisible] = useState(false);
   const [is_hovered, setIsHovered] = useState(false);
-  let listener = () => {
+  let listener = (e) => {
     let offset = e?.srcElement?.defaultView?.pageYOffset;
     if (offset > 200) setIsVisible(true);
     else {
