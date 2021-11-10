@@ -1,6 +1,7 @@
 # React Top Scroll
 
-Simple button that scrolls page to the top smoothly. [Demo](https://google.com)
+Simple button that scrolls page to the top smoothly. [Demo](https://megarohas-demos.herokuapp.com/react_top_scroll_demo)
+[![react-top-scroll-demo.gif](https://i.postimg.cc/W3CJkkbS/react-top-scroll-demo.gif)](https://postimg.cc/Vr96y5tb)
 
 ## Getting Started
 
@@ -19,7 +20,7 @@ import TopScroll from "react_top_scroll";
 
 <div>
   <TopScroll />
-</div>
+</div>;
 ```
 
 ## Props

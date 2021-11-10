@@ -1,9 +1,9 @@
 {
   "name": "react_top_scroll",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "scripts": {
     "build": "webpack",
-    "upload": "npm run build; git add .; git commit -m 'after build 1.1.8';git push; npm publish"
+    "upload": "npm run build; git add .; git commit -m 'after build 1.1.9';git push; npm publish"
   },
   "description": "Simple button that scrolls page to the top smoothly",
   "main": "./index.js",
