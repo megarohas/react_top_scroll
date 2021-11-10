@@ -1,50 +1,22 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-
-const ScrollButton = styled.div`
-  position: fixed;
-  bottom: 100px;
-  right: 0px;
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  background-color: rgba(41, 44, 55, 0.5);
-  height: 40px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding: 0 20px 0 20px;
-  &:hover {
-    background-color: rgb(41, 44, 55);
-    cursor: pointer;
-  }
-`;
-const ArrowImg = styled.img`
-  width: 30px;
-  height: 30px;
-  transform: rotate(180deg);
-  marginleft: -15px !important;
-  marginbottom: 5px !important;
-`;
+import { ScrollButton, ArrowImg } from "./styled_components.js";
 
 const TopScroll = ({ btn_text, arrow_sign, options }) => {
   const [is_visible, setIsVisible] = useState(false);
   const [is_hovered, setIsHovered] = useState(false);
-  let listener = () => {};
-  useEffect(() => {
-    // if (window?.document?.defaultView?.pageYOffset > 0) setIsVisible(true);
-    if (window?.document?.defaultView?.pageYOffset > 0) setIsVisible(true);
-    listener = window.addEventListener("scroll", (e) => {
-      let offset = e?.srcElement?.defaultView?.pageYOffset;
-      if (offset > 200) setIsVisible(true);
-      else {
-        setIsVisible(false);
-        setIsHovered(false);
-      }
-    });
+  let listener = () => {
+    let offset = e?.srcElement?.defaultView?.pageYOffset;
+    if (offset > 200) setIsVisible(true);
+    else {
+      setIsVisible(false);
+      setIsHovered(false);
+    }
+  };
 
+  useEffect(() => {
+    if (window?.document?.defaultView?.pageYOffset > 0) setIsVisible(true);
+    window.addEventListener("scroll", listener);
     return () => {
       window.removeEventListener("scroll", listener);
     };
