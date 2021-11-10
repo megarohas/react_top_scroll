@@ -2,7 +2,7 @@
   "name": "react_top_scroll",
   "version": "1.0.9",
   "description": "Simple button that scrolls page to the top smoothly",
-  "main": "./output.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/megarohas/react_top_scroll.git"
@@ -60,7 +60,8 @@
   },
   "dependencies": {
     "babel-loader": "^8.2.3",
-    "file-loader": "^6.2.0"
+    "file-loader": "^6.2.0",
+    "styled-components": "^5.3.3"
   },
   "homepage": "https://github.com/megarohas/react_top_scroll#readme"
 }

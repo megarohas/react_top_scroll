@@ -10,10 +10,10 @@ module.exports = {
     }),
   ],
   mode: "production",
-  entry: "./react_top_scroll.js",
+  entry: "./src/react_top_scroll.js",
   output: {
     path: path.resolve(""),
-    filename: "output.js",
+    filename: "index.js",
     libraryTarget: "umd",
     // libraryTarget: "commonjs2",
   },

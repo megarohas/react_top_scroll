@@ -1,7 +1,33 @@
-import "./react_top_scroll.scss";
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
-import ArrowSign from "./top_arrow.png";
+import styled from "styled-components";
+
+const ScrollButton = styled.div`
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: rgba(46, 62, 110, 0.5);
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 20px 0 20px;
+  &:hover {
+    background-color: rgb(46, 62, 110);
+    cursor: pointer;
+  }
+`;
+const ArrowImg = styled.img`
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+  marginleft: -15px;
+  marginbottom: 5px;
+`;
 
 const TopScroll = ({ btn_text, arrow_sign, options }) => {
   const [is_visible, setIsVisible] = useState(false);
@@ -31,15 +57,14 @@ const TopScroll = ({ btn_text, arrow_sign, options }) => {
   };
   return (
     is_visible && (
-      <div
+      <ScrollButton
         {...options}
-        className="rts-top_scroll-btn"
         onClick={handleOnClick}
         onMouseEnter={() => handleMouseMove(true)}
         onMouseLeave={() => handleMouseMove(false)}
       >
         {is_hovered ? btn_text : arrow_sign}
-      </div>
+      </ScrollButton>
     )
   );
 };
@@ -47,7 +72,7 @@ const TopScroll = ({ btn_text, arrow_sign, options }) => {
 TopScroll.defaultProps = {
   btn_text: "Click to the Top Scroll",
   arrow_sign: (
-    <img className={"rts-top_scroll-arrow_sign"} src="/top_arrow.png" />
+    <ArrowImg src="https://raw.githubusercontent.com/megarohas/react_top_scroll/main/assets/top_arrow.png" />
   ),
   // arrow_sign: "⬆️"
 };
