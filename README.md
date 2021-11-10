@@ -19,7 +19,7 @@ import TopScroll from "react_top_scroll";
 
 <div>
   <TopScroll />
-</div>
+</div>;
 ```
 
 ## Props
@@ -34,6 +34,7 @@ import TopScroll from "react_top_scroll";
 
 - react.js
 - prop-types
+- styled-components
 
 ## Authors
 
