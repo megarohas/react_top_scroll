@@ -1,6 +1,6 @@
 {
   "name": "react_top_scroll",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Simple button that scrolls page to the top smoothly",
   "main": "./index.js",
   "repository": {
@@ -25,7 +25,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "publish": "npm run build; git add .; git commit -m 'after build 1.1.6';git push; npm publish"
+    "upload": "npm run build; git add .; git commit -m 'after build 1.1.7';git push; npm publish"
   },
   "author": "Alex Galkin",
   "bugs": {
