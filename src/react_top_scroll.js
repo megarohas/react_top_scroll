@@ -6,9 +6,9 @@ const ScrollButton = styled.div`
   position: fixed;
   bottom: 100px;
   right: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-color: rgba(46, 62, 110, 0.5);
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  background-color: rgba(41, 44, 55, 0.5);
   height: 40px;
   border-radius: 20px;
   display: flex;
@@ -17,7 +17,7 @@ const ScrollButton = styled.div`
   color: white;
   padding: 0 20px 0 20px;
   &:hover {
-    background-color: rgb(46, 62, 110);
+    background-color: rgb(41, 44, 55);
     cursor: pointer;
   }
 `;
@@ -25,8 +25,8 @@ const ArrowImg = styled.img`
   width: 30px;
   height: 30px;
   transform: rotate(180deg);
-  marginleft: -15px;
-  marginbottom: 5px;
+  marginleft: -15px !important;
+  marginbottom: 5px !important;
 `;
 
 const TopScroll = ({ btn_text, arrow_sign, options }) => {
