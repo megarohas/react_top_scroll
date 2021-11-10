@@ -13,8 +13,9 @@ module.exports = {
   entry: "./react_top_scroll.js",
   output: {
     path: path.resolve(""),
-    filename: "react_top_scroll.js",
-    libraryTarget: "commonjs2",
+    filename: "output.js",
+    libraryTarget: "umd",
+    // libraryTarget: "commonjs2",
   },
   module: {
     rules: [
