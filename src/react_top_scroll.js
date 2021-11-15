@@ -43,10 +43,11 @@ const TopScroll = ({ btn_text, arrow_sign, options }) => {
 
 TopScroll.defaultProps = {
   btn_text: "Click to the Top Scroll",
-  arrow_sign: (
-    <ArrowImg src="https://raw.githubusercontent.com/megarohas/react_top_scroll/main/assets/top_arrow.png" />
-  ),
-  // arrow_sign: "⬆️"
+  arrow_sign: "▲",
+  options: {},
+  // arrow_sign: (
+  //   <ArrowImg src="https://raw.githubusercontent.com/megarohas/react_top_scroll/main/assets/top_arrow.png" />
+  // ),
 };
 
 TopScroll.propTypes = {

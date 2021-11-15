@@ -28,7 +28,7 @@ import TopScroll from "react_top_scroll";
 | Name       | Type   | Default                 | Description                                                  |
 | ---------- | ------ | ----------------------- | ------------------------------------------------------------ |
 | btn_text   | String | Click to the Top Scroll | Text that will be displayed after hovering the button        |
-| arrow_sign | String | ⬆️                      | Arrow Sign                                                   |
+| arrow_sign | String | ▲                       | Arrow Sign                                                   |
 | options    | Object | {}                      | Object that will be spreaded in the top div of the component |
 
 ## Built With
